@@ -1,0 +1,42 @@
+{"id": "q01", "type": "single", "question": "How do I let my React app on localhost:3000 call my FastAPI backend from the browser?", "gold": ["tutorial/cors.md"], "facts": ["CORSMiddleware", "allow_origins"]}
+{"id": "q02", "type": "single", "question": "I want to send an email after returning the response so the client doesn't wait. How?", "gold": ["tutorial/background-tasks.md"], "facts": ["BackgroundTasks", "add_task"]}
+{"id": "q03", "type": "single", "question": "How do I make a query parameter optional?", "gold": ["tutorial/query-params.md"], "facts": ["default value of None"]}
+{"id": "q04", "type": "single", "question": "How do I accept a file upload in an endpoint?", "gold": ["tutorial/request-files.md"], "facts": ["UploadFile", "python-multipart"]}
+{"id": "q05", "type": "single", "question": "My POST endpoint creates a resource. How do I make it return 201 instead of 200?", "gold": ["tutorial/response-status-code.md"], "facts": ["status_code=201"]}
+{"id": "q06", "type": "single", "question": "How do I return a 404 with an error message when an item doesn't exist?", "gold": ["tutorial/handling-errors.md"], "facts": ["HTTPException", "status_code=404", "detail"]}
+{"id": "q07", "type": "single", "question": "How can I add a custom header to the response of one endpoint?", "gold": ["advanced/response-headers.md"], "facts": ["Response", "headers"]}
+{"id": "q08", "type": "single", "question": "How do I set a cookie on the response?", "gold": ["advanced/response-cookies.md"], "facts": ["set_cookie"]}
+{"id": "q09", "type": "single", "question": "How do I read the User-Agent header in a path operation?", "gold": ["tutorial/header-params.md"], "facts": ["Header", "underscores converted to hyphens"]}
+{"id": "q10", "type": "single", "question": "How do I serve CSS and image files from a folder?", "gold": ["tutorial/static-files.md"], "facts": ["StaticFiles", "mount"]}
+{"id": "q11", "type": "single", "question": "How do I write tests for my FastAPI app?", "gold": ["tutorial/testing.md"], "facts": ["TestClient", "pytest"]}
+{"id": "q12", "type": "single", "question": "In tests, how do I replace a dependency that calls an external service with a fake one?", "gold": ["advanced/testing-dependencies.md"], "facts": ["dependency_overrides"]}
+{"id": "q13", "type": "single", "question": "I need to load an ML model once when the app starts and release it on shutdown. What's the right way?", "gold": ["advanced/events.md"], "facts": ["lifespan", "asynccontextmanager"]}
+{"id": "q14", "type": "single", "question": "How do I limit a query string parameter to at most 50 characters?", "gold": ["tutorial/query-params-str-validations.md"], "facts": ["Query", "max_length"]}
+{"id": "q15", "type": "single", "question": "How do I require a path parameter item_id to be greater than or equal to 1?", "gold": ["tutorial/path-params-numeric-validations.md"], "facts": ["Path", "ge"]}
+{"id": "q16", "type": "single", "question": "How do I write a dependency that opens a database session and always closes it after the request?", "gold": ["tutorial/dependencies/dependencies-with-yield.md"], "facts": ["yield", "finally"]}
+{"id": "q17", "type": "single", "question": "How do I issue JWT access tokens with the OAuth2 password flow?", "gold": ["tutorial/security/oauth2-jwt.md"], "facts": ["OAuth2PasswordBearer", "JWT", "access_token"]}
+{"id": "q18", "type": "single", "question": "My user model has a password field. How do I make sure it never shows up in the API response?", "gold": ["tutorial/response-model.md", "tutorial/extra-models.md"], "facts": ["response_model"]}
+{"id": "q19", "type": "single", "question": "My app is getting big. How do I split routes across multiple files?", "gold": ["tutorial/bigger-applications.md"], "facts": ["APIRouter", "include_router"]}
+{"id": "q20", "type": "single", "question": "How do I add a middleware that measures how long each request takes?", "gold": ["tutorial/middleware.md"], "facts": ["@app.middleware", "call_next"]}
+{"id": "q21", "type": "single", "question": "How do I connect FastAPI to a SQL database?", "gold": ["tutorial/sql-databases.md"], "facts": ["SQLModel", "Session"]}
+{"id": "q22", "type": "single", "question": "How do I add a WebSocket endpoint?", "gold": ["advanced/websockets.md"], "facts": ["@app.websocket", "accept"]}
+{"id": "q23", "type": "single", "question": "How do I run my app with several worker processes in production?", "gold": ["deployment/server-workers.md"], "facts": ["--workers"]}
+{"id": "q24", "type": "single", "question": "How do I build a Docker image for a FastAPI app?", "gold": ["deployment/docker.md"], "facts": ["Dockerfile", "FROM python"]}
+{"id": "q25", "type": "single", "question": "How should I load configuration like API keys from environment variables?", "gold": ["advanced/settings.md"], "facts": ["pydantic-settings", "BaseSettings"]}
+{"id": "q26", "type": "single", "question": "When should a path operation be async def and when plain def?", "gold": ["async.md"], "facts": ["use async def when calling libraries that need await", "use normal def when the library does not support await"]}
+{"id": "q27", "type": "single", "question": "My HTML login form posts username and password as form fields, not JSON. How do I receive them?", "gold": ["tutorial/request-forms.md"], "facts": ["Form", "python-multipart"]}
+{"id": "q28", "type": "single", "question": "How do I do a partial update with PATCH so fields the client didn't send stay unchanged?", "gold": ["tutorial/body-updates.md"], "facts": ["exclude_unset"]}
+{"id": "q29", "type": "single", "question": "How do I turn a Pydantic model with datetime fields into something JSON-compatible to store?", "gold": ["tutorial/encoder.md"], "facts": ["jsonable_encoder"]}
+{"id": "q30", "type": "single", "question": "How do I mount a completely separate FastAPI app under /subapi with its own docs?", "gold": ["advanced/sub-applications.md"], "facts": ["mount"]}
+{"id": "q31", "type": "single", "question": "My app runs behind a proxy that serves it under /api/v1. The docs page breaks. What setting fixes it?", "gold": ["advanced/behind-a-proxy.md"], "facts": ["root_path"]}
+{"id": "q32", "type": "single", "question": "How do I return an HTML page from an endpoint instead of JSON?", "gold": ["advanced/custom-response.md"], "facts": ["HTMLResponse"]}
+{"id": "q33", "type": "single", "question": "How do I render Jinja2 templates?", "gold": ["advanced/templates.md"], "facts": ["Jinja2Templates", "TemplateResponse"]}
+{"id": "q34", "type": "multi", "question": "How do I protect an endpoint so only a logged-in user can call it, and get that user object inside the endpoint?", "gold": ["tutorial/security/get-current-user.md", "tutorial/security/simple-oauth2.md", "tutorial/security/oauth2-jwt.md", "tutorial/security/first-steps.md"], "facts": ["Depends", "get_current_user", "OAuth2PasswordBearer"]}
+{"id": "q35", "type": "multi", "question": "How do I accept an uploaded file and some text fields in the same request?", "gold": ["tutorial/request-forms-and-files.md"], "facts": ["File", "Form"]}
+{"id": "q36", "type": "multi", "question": "How do I stream a large file or generated data to the client instead of loading it all in memory, and what response class do I use?", "gold": ["advanced/custom-response.md", "advanced/stream-data.md"], "facts": ["StreamingResponse"]}
+{"id": "q37", "type": "multi", "question": "How do I make every route in a router require an API token header, and also tag them for the docs?", "gold": ["tutorial/bigger-applications.md", "tutorial/dependencies/dependencies-in-path-operation-decorators.md"], "facts": ["dependencies", "tags", "APIRouter"]}
+{"id": "q38", "type": "multi", "question": "I want the same validation error format everywhere. How do I override the default handler for request validation errors?", "gold": ["tutorial/handling-errors.md"], "facts": ["RequestValidationError", "exception_handler"]}
+{"id": "q39", "type": "unanswerable", "question": "How do I configure a Kafka consumer group inside FastAPI?", "gold": [], "facts": []}
+{"id": "q40", "type": "unanswerable", "question": "What is the weather in Islamabad today?", "gold": [], "facts": []}
+{"id": "q41", "type": "unanswerable", "question": "How do I add rate limiting with the slowapi library and Redis?", "gold": [], "facts": []}
+{"id": "q42", "type": "unanswerable", "question": "How do I connect FastAPI to a Cassandra cluster?", "gold": [], "facts": []}
