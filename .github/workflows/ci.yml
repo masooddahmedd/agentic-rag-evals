@@ -1,8 +1,7 @@
 name: ci
 
 on:
-  push:
-  pull_request:
+  workflow_dispatch:   # run from the Actions tab
 
 jobs:
   test-and-retrieval-eval:

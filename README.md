@@ -94,7 +94,7 @@ The FastAPI docs (MIT licence), pinned to commit `ba47d6d`. That is 116 pages an
 
 Each answerable question lists its gold page(s) and the key facts a correct answer must contain. `evals/check_questions.py` verifies that every gold page exists and every literal fact appears on it.
 
-- `evals/retrieval_eval.py` measures hit@5 and MRR per retriever, with no LLM. It runs in CI and fails the build if hybrid hit@5 drops below 0.9.
+- `evals/retrieval_eval.py` measures hit@5 and MRR per retriever, with no LLM. The CI workflow runs it after the unit tests and fails if hybrid hit@5 drops below 0.9.
 - `evals/agent_eval.py` runs the agent and the plain baseline on every question. A judge model from a different family checks fact coverage and whether every claim is backed by the cited sources. It also records citation precision, refusals, latency and tokens.
 
 ## Run it
@@ -124,5 +124,5 @@ rag/agent.py          LangGraph agent and the plain-RAG baseline
 rag/api.py            FastAPI with streaming steps
 web/                  Next.js UI: live step trace, answer with linked citations
 evals/                question set, retrieval eval, agent eval with judge
-.github/workflows/    tests and retrieval eval on every push
+.github/workflows/    tests and retrieval eval (run from the Actions tab)
 ```
