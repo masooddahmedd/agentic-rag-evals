@@ -1,0 +1,39 @@
+{
+  "agent": {
+    "questions": 42,
+    "facts_covered": 0.921,
+    "answers_with_citations": 1.0,
+    "cited_answers_supported": 0.816,
+    "cited_answers_partly": 0.105,
+    "cited_answers_unsupported": 0.079,
+    "citation_precision": 0.779,
+    "gold_page_in_context": 0.947,
+    "wrongly_refused": 0,
+    "correct_refusals": "4/4",
+    "latency_p50_s": 6.9,
+    "latency_p90_s": 9.3,
+    "tokens_per_question": 3042,
+    "llm_calls_per_question": 2.4
+  },
+  "plain": {
+    "questions": 42,
+    "facts_covered": 0.934,
+    "answers_with_citations": 1.0,
+    "cited_answers_supported": 0.711,
+    "cited_answers_partly": 0.237,
+    "cited_answers_unsupported": 0.053,
+    "citation_precision": 0.817,
+    "gold_page_in_context": 0.947,
+    "wrongly_refused": 0,
+    "correct_refusals": "4/4",
+    "latency_p50_s": 2.7,
+    "latency_p90_s": 5.9,
+    "tokens_per_question": 4474,
+    "llm_calls_per_question": 1.4
+  },
+  "models": {
+    "answer": "rag-qwen7b",
+    "judge": "rag-judge-qwen3-14b",
+    "embeddings": "BAAI/bge-small-en-v1.5"
+  }
+}
